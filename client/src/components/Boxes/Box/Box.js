@@ -22,7 +22,6 @@ class Box extends Component {
         {this.state.data.map((item)=>{
            return <p key={item.id}>{item.id} : {item.email}</p>
         })}
-        <h1>aaaa</h1> 
       </div>
     );
   }

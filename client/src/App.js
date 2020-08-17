@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import Logo from "./components/Logo/Logo";
-import Box from "./components/Box/Box";
-import Button from "./components/Button/Button";
+import Boxes from "./components/Boxes/Boxes";
 
 const App = (_) => {
   return (
     <BrowserRouter>
       <Logo />
-      <Box />
-      <Button>Pull Data</Button>
+      <Boxes />
     </BrowserRouter>
   );
 };
