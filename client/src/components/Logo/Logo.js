@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./Logo.scss";
-import Logo from "../../assets/images/dev-test-img.svg";
+import  "./Logo.scss";
+import LogoImage from "../../assets/images/dev-test-img.svg";
 const Logo = (props) => (
-  <div className={classes.Logo} style={{ height: props.height }}>
-    <img src={Logo} />
+  <div className="Logo">
+    <img src={LogoImage} />
   </div>
 );
 
