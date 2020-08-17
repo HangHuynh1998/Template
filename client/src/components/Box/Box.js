@@ -1,23 +1,31 @@
-import React, { Component } from 'react';
-import classes from "./Box.scss"
-import Button from '../Button/Button';
+import React, { Component } from "react";
+import "./Box.scss";
+import Axios from "axios";
 class Box extends Component {
-    state={
-        show:false,
-    }
-    showBox =()=>{
-      this.setState({show:true})
-    }
-    render() {
-        return (
-            <div>
-            this.state.show?{<div className={classes.Box}>
-                this.props.children
-            </div>}:null
-            <Button onClick={this.showBox}/>
-            </div>
-        );
-    }
+  state={
+      data:[]
+  }
+  // showBox =()=>{
+  //   this.setState({show:true})
+  // }
+  componentDidMount(){
+    Axios.get(` https://jsonplaceholder.typicode.com/comments`)
+    .then(res => {
+      this.setState({data:res.data})
+    })
+    .catch(error => console.log(error));
+  }
+  render() {
+      console.log(this.state.data);
+    return (
+      <div className="Box">
+        {this.state.data.map((item)=>{
+           return <p key={item.id}>{item.id} : {item.email}</p>
+        })}
+        <h1>aaaa</h1> 
+      </div>
+    );
+  }
 }
 
 export default Box;

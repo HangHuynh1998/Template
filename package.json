@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ktruo010/full-stack-test-template#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "concurrently": "^5.2.0",
     "create-react-app": "^3.4.1",
     "express": "^4.17.1",
